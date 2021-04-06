@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devices xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://www.example.com/devices"
+         xsi:schemaLocation="http://www.example.com/devices ../schema/devices.xsd">
+
+    <peripheral-device id="device1">
+        <name>Example</name>
+        <origin>USA</origin>
+        <price>100</price>
+        <power-consumption>100</power-consumption>
+        <cooler>false</cooler>
+        <critical>true</critical>
+        <port>USB</port>
+        <type>IO</type>
+    </peripheral-device>
+
+    <integral-device id="device2">
+        <name>Example</name>
+        <origin>China</origin>
+        <price>1000</price>
+        <power-consumption>1000</power-consumption>
+        <cooler>true</cooler>
+        <critical>true</critical>
+        <type>CPU</type>
+    </integral-device>
+    
+</devices>

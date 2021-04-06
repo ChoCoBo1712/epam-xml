@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/devices"
+        xmlns:tns="http://www.example.com/devices"
+        elementFormDefault="qualified">
+
+    <element name="devices">
+        <complexType>
+            <sequence>
+                <element ref="tns:device" maxOccurs="unbounded" />
+            </sequence>
+        </complexType>
+    </element>
+    <element name="device" type="tns:device" abstract="true"/>
+    <element name="peripheral-device" type="tns:peripheral-device" substitutionGroup="tns:device"/>
+    <element name="integral-device" type="tns:integral-device" substitutionGroup="tns:device"/>
+
+    <complexType name="device">
+        <sequence>
+            <element name="name" type="string"/>
+            <element name="origin" type="tns:origin"/>
+            <element name="price">
+                <simpleType>
+                    <restriction base="unsignedInt">
+                        <minInclusive value="1"/>
+                        <maxInclusive value="1000000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="power-consumption">
+                <simpleType>
+                    <restriction base="unsignedInt">
+                        <minInclusive value="1"/>
+                        <maxInclusive value="10000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="cooler" type="boolean"/>
+            <element name="critical" type="boolean"/>
+        </sequence>
+        <attribute name="id" type="tns:device-id" use="required"/>
+        <attribute name="color" type="string" use="optional" default="Black"/>
+    </complexType>
+    
+    <complexType name="peripheral-device">
+        <complexContent>
+            <extension base="tns:device">
+                <sequence>
+                    <element name="port" type="tns:port"/>
+                    <element name="type" type="tns:peripheral-device-type"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="integral-device">
+        <complexContent>
+            <extension base="tns:device">
+                <sequence>
+                    <element name="type" type="tns:integral-device-type"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <simpleType name="origin">
+        <restriction base="string">
+            <enumeration value="USA"/>
+            <enumeration value="China"/>
+            <enumeration value="Japan"/>
+            <enumeration value="Germany"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="device-id">
+        <restriction base="ID">
+            <pattern value="\w{1,10}"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="port">
+        <restriction base="string">
+            <enumeration value="COM"/>
+            <enumeration value="USB"/>
+            <enumeration value="LPT"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="integral-device-type">
+        <restriction base="string">
+            <enumeration value="CPU"/>
+            <enumeration value="Motherboard"/>
+            <enumeration value="Power supply"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="peripheral-device-type">
+        <restriction base="string">
+            <enumeration value="IO"/>
+            <enumeration value="Multimedia"/>
+        </restriction>
+    </simpleType>
+</schema>
