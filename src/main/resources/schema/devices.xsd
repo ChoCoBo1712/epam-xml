@@ -74,7 +74,7 @@
 
     <simpleType name="device-id">
         <restriction base="ID">
-            <pattern value="\w{1,10}"/>
+            <pattern value="\w{1,20}"/>
         </restriction>
     </simpleType>
 

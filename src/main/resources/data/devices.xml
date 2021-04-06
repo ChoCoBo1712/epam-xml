@@ -3,8 +3,8 @@
          xmlns="http://www.example.com/devices"
          xsi:schemaLocation="http://www.example.com/devices ../schema/devices.xsd">
 
-    <peripheral-device id="device1">
-        <name>Example</name>
+    <peripheral-device id="peripheral1">
+        <name>Peripheral example 1</name>
         <origin>USA</origin>
         <price>100</price>
         <power-consumption>100</power-consumption>
@@ -14,14 +14,161 @@
         <type>IO</type>
     </peripheral-device>
 
-    <integral-device id="device2">
-        <name>Example</name>
+    <peripheral-device id="peripheral2">
+        <name>Peripheral example 2</name>
+        <origin>China</origin>
+        <price>300</price>
+        <power-consumption>200</power-consumption>
+        <cooler>false</cooler>
+        <critical>false</critical>
+        <port>COM</port>
+        <type>Multimedia</type>
+    </peripheral-device>
+
+    <peripheral-device id="peripheral3">
+        <name>Peripheral example 3</name>
+        <origin>Japan</origin>
+        <price>400</price>
+        <power-consumption>150</power-consumption>
+        <cooler>true</cooler>
+        <critical>false</critical>
+        <port>LPT</port>
+        <type>IO</type>
+    </peripheral-device>
+
+    <peripheral-device id="peripheral4">
+        <name>Peripheral example 4</name>
+        <origin>Germany</origin>
+        <price>1000</price>
+        <power-consumption>330</power-consumption>
+        <cooler>true</cooler>
+        <critical>true</critical>
+        <port>COM</port>
+        <type>IO</type>
+    </peripheral-device>
+
+    <peripheral-device id="peripheral5">
+        <name>Peripheral example 5</name>
+        <origin>Germany</origin>
+        <price>600</price>
+        <power-consumption>50</power-consumption>
+        <cooler>false</cooler>
+        <critical>false</critical>
+        <port>USB</port>
+        <type>Multimedia</type>
+    </peripheral-device>
+
+    <peripheral-device id="peripheral6">
+        <name>Peripheral example 6</name>
+        <origin>China</origin>
+        <price>199</price>
+        <power-consumption>60</power-consumption>
+        <cooler>true</cooler>
+        <critical>false</critical>
+        <port>LPT</port>
+        <type>Multimedia</type>
+    </peripheral-device>
+
+    <peripheral-device id="peripheral7">
+        <name>Peripheral example 7</name>
+        <origin>Japan</origin>
+        <price>700</price>
+        <power-consumption>150</power-consumption>
+        <cooler>true</cooler>
+        <critical>false</critical>
+        <port>COM</port>
+        <type>Multimedia</type>
+    </peripheral-device>
+
+    <peripheral-device id="peripheral8">
+        <name>Peripheral example 8</name>
+        <origin>USA</origin>
+        <price>1500</price>
+        <power-consumption>500</power-consumption>
+        <cooler>true</cooler>
+        <critical>false</critical>
+        <port>USB</port>
+        <type>IO</type>
+    </peripheral-device>
+
+    <integral-device id="integral1">
+        <name>Integral example 1</name>
         <origin>China</origin>
         <price>1000</price>
         <power-consumption>1000</power-consumption>
         <cooler>true</cooler>
         <critical>true</critical>
         <type>CPU</type>
+    </integral-device>
+
+    <integral-device id="integral2">
+        <name>Integral example 2</name>
+        <origin>USA</origin>
+        <price>500</price>
+        <power-consumption>300</power-consumption>
+        <cooler>false</cooler>
+        <critical>true</critical>
+        <type>Motherboard</type>
+    </integral-device>
+
+    <integral-device id="integral3">
+        <name>Integral example 3</name>
+        <origin>Japan</origin>
+        <price>400</price>
+        <power-consumption>50</power-consumption>
+        <cooler>false</cooler>
+        <critical>true</critical>
+        <type>Power supply</type>
+    </integral-device>
+
+    <integral-device id="integral4">
+        <name>Integral example 4</name>
+        <origin>Germany</origin>
+        <price>5000</price>
+        <power-consumption>800</power-consumption>
+        <cooler>true</cooler>
+        <critical>true</critical>
+        <type>CPU</type>
+    </integral-device>
+
+    <integral-device id="integral5">
+        <name>Integral example 5</name>
+        <origin>USA</origin>
+        <price>100</price>
+        <power-consumption>100</power-consumption>
+        <cooler>true</cooler>
+        <critical>true</critical>
+        <type>CPU</type>
+    </integral-device>
+
+    <integral-device id="integral6">
+        <name>Integral example 6</name>
+        <origin>China</origin>
+        <price>200</price>
+        <power-consumption>150</power-consumption>
+        <cooler>false</cooler>
+        <critical>true</critical>
+        <type>Motherboard</type>
+    </integral-device>
+
+    <integral-device id="integral7">
+        <name>Integral example 7</name>
+        <origin>Japan</origin>
+        <price>600</price>
+        <power-consumption>450</power-consumption>
+        <cooler>true</cooler>
+        <critical>true</critical>
+        <type>CPU</type>
+    </integral-device>
+
+    <integral-device id="integral8">
+        <name>Integral example 8</name>
+        <origin>Japan</origin>
+        <price>666</price>
+        <power-consumption>100</power-consumption>
+        <cooler>false</cooler>
+        <critical>true</critical>
+        <type>Power supply</type>
     </integral-device>
     
 </devices>
