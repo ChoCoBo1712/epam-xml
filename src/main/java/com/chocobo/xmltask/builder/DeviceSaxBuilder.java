@@ -11,12 +11,12 @@ import javax.xml.parsers.SAXParserFactory;
 import java.io.IOException;
 import java.util.Set;
 
-public class DevicesSaxBuilder extends DeviceBuilder {
+public class DeviceSaxBuilder extends DeviceBuilder {
 
     private DeviceHandler handler = new DeviceHandler();
     private XMLReader reader;
 
-    public DevicesSaxBuilder() throws DeviceException {
+    public DeviceSaxBuilder() throws DeviceException {
         SAXParserFactory factory = SAXParserFactory.newInstance();
         try {
             SAXParser parser = factory.newSAXParser();
@@ -29,7 +29,7 @@ public class DevicesSaxBuilder extends DeviceBuilder {
     }
 
     @Override
-    public void buildDevices(String filePath) throws DeviceException {
+    public void buildSetDevices(String filePath) throws DeviceException {
         try {
             reader.parse(filePath);
         } catch (IOException e) {

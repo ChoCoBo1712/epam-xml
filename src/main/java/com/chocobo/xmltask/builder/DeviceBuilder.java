@@ -22,5 +22,5 @@ public abstract class DeviceBuilder {
         return devices;
     }
 
-    public abstract void buildDevices(String xmlPath) throws DeviceException;
+    public abstract void buildSetDevices(String xmlPath) throws DeviceException;
 }
