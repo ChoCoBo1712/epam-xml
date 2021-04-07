@@ -3,10 +3,11 @@
          xmlns="http://www.example.com/devices"
          xsi:schemaLocation="http://www.example.com/devices ../schema/devices.xsd">
 
-    <peripheral-device id="peripheral1">
+    <peripheral-device id="peripheral1" color="Blue">
         <name>Peripheral example 1</name>
         <origin>USA</origin>
         <price>100</price>
+        <release-time>2020-12</release-time>
         <power-consumption>100</power-consumption>
         <cooler>false</cooler>
         <critical>true</critical>
@@ -18,6 +19,7 @@
         <name>Peripheral example 2</name>
         <origin>China</origin>
         <price>300</price>
+        <release-time>2020-10</release-time>
         <power-consumption>200</power-consumption>
         <cooler>false</cooler>
         <critical>false</critical>
@@ -29,6 +31,7 @@
         <name>Peripheral example 3</name>
         <origin>Japan</origin>
         <price>400</price>
+        <release-time>2021-01</release-time>
         <power-consumption>150</power-consumption>
         <cooler>true</cooler>
         <critical>false</critical>
@@ -36,10 +39,11 @@
         <type>IO</type>
     </peripheral-device>
 
-    <peripheral-device id="peripheral4">
+    <peripheral-device id="peripheral4" color="Red">
         <name>Peripheral example 4</name>
         <origin>Germany</origin>
         <price>1000</price>
+        <release-time>2020-07</release-time>
         <power-consumption>330</power-consumption>
         <cooler>true</cooler>
         <critical>true</critical>
@@ -51,6 +55,7 @@
         <name>Peripheral example 5</name>
         <origin>Germany</origin>
         <price>600</price>
+        <release-time>2019-12</release-time>
         <power-consumption>50</power-consumption>
         <cooler>false</cooler>
         <critical>false</critical>
@@ -58,10 +63,11 @@
         <type>Multimedia</type>
     </peripheral-device>
 
-    <peripheral-device id="peripheral6">
+    <peripheral-device id="peripheral6" color="Yellow">
         <name>Peripheral example 6</name>
         <origin>China</origin>
         <price>199</price>
+        <release-time>2010-12</release-time>
         <power-consumption>60</power-consumption>
         <cooler>true</cooler>
         <critical>false</critical>
@@ -73,6 +79,7 @@
         <name>Peripheral example 7</name>
         <origin>Japan</origin>
         <price>700</price>
+        <release-time>2019-08</release-time>
         <power-consumption>150</power-consumption>
         <cooler>true</cooler>
         <critical>false</critical>
@@ -84,6 +91,7 @@
         <name>Peripheral example 8</name>
         <origin>USA</origin>
         <price>1500</price>
+        <release-time>2020-09</release-time>
         <power-consumption>500</power-consumption>
         <cooler>true</cooler>
         <critical>false</critical>
@@ -95,6 +103,7 @@
         <name>Integral example 1</name>
         <origin>China</origin>
         <price>1000</price>
+        <release-time>2016-11</release-time>
         <power-consumption>1000</power-consumption>
         <cooler>true</cooler>
         <critical>true</critical>
@@ -105,16 +114,18 @@
         <name>Integral example 2</name>
         <origin>USA</origin>
         <price>500</price>
+        <release-time>2018-10</release-time>
         <power-consumption>300</power-consumption>
         <cooler>false</cooler>
         <critical>true</critical>
         <type>Motherboard</type>
     </integral-device>
 
-    <integral-device id="integral3">
+    <integral-device id="integral3" color="Silver">
         <name>Integral example 3</name>
         <origin>Japan</origin>
         <price>400</price>
+        <release-time>2021-02</release-time>
         <power-consumption>50</power-consumption>
         <cooler>false</cooler>
         <critical>true</critical>
@@ -125,6 +136,7 @@
         <name>Integral example 4</name>
         <origin>Germany</origin>
         <price>5000</price>
+        <release-time>2021-03</release-time>
         <power-consumption>800</power-consumption>
         <cooler>true</cooler>
         <critical>true</critical>
@@ -135,16 +147,18 @@
         <name>Integral example 5</name>
         <origin>USA</origin>
         <price>100</price>
+        <release-time>2021-04</release-time>
         <power-consumption>100</power-consumption>
         <cooler>true</cooler>
         <critical>true</critical>
         <type>CPU</type>
     </integral-device>
 
-    <integral-device id="integral6">
+    <integral-device id="integral6" color="Metallic">
         <name>Integral example 6</name>
         <origin>China</origin>
         <price>200</price>
+        <release-time>2018-04</release-time>
         <power-consumption>150</power-consumption>
         <cooler>false</cooler>
         <critical>true</critical>
@@ -155,6 +169,7 @@
         <name>Integral example 7</name>
         <origin>Japan</origin>
         <price>600</price>
+        <release-time>2020-02</release-time>
         <power-consumption>450</power-consumption>
         <cooler>true</cooler>
         <critical>true</critical>
@@ -165,6 +180,7 @@
         <name>Integral example 8</name>
         <origin>Japan</origin>
         <price>666</price>
+        <release-time>2020-06</release-time>
         <power-consumption>100</power-consumption>
         <cooler>false</cooler>
         <critical>true</critical>

@@ -27,6 +27,7 @@
                     </restriction>
                 </simpleType>
             </element>
+            <element name="release-time" type="gYearMonth"/>
             <element name="power-consumption">
                 <simpleType>
                     <restriction base="unsignedInt">

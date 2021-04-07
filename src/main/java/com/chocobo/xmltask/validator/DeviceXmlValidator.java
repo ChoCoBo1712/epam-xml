@@ -1,7 +1,6 @@
 package com.chocobo.xmltask.validator;
 
 import com.chocobo.xmltask.exception.DeviceException;
-import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.xml.sax.SAXException;
@@ -14,10 +13,6 @@ import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
 import java.io.File;
 import java.io.IOException;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.Objects;
 
 public class DeviceXmlValidator {
