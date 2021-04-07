@@ -6,16 +6,19 @@ import java.util.Objects;
 public class PeripheralDevice extends Device{
 
     private PeripheralDeviceType deviceType;
+    private DevicePort devicePort;
 
     public PeripheralDevice() {
     }
 
     public PeripheralDevice(
             String id, String color, String name, DeviceOrigin origin, int price, YearMonth releaseTime,
-            int powerConsumption, boolean cooler, boolean critical, PeripheralDeviceType deviceType
+            int powerConsumption, boolean cooler, boolean critical, PeripheralDeviceType deviceType,
+            DevicePort devicePort
     ) {
         super(id, color, name, origin, price, releaseTime, powerConsumption, cooler, critical);
         this.deviceType = deviceType;
+        this.devicePort = devicePort;
     }
 
     public PeripheralDeviceType getDeviceType() {
@@ -24,6 +27,14 @@ public class PeripheralDevice extends Device{
 
     public void setDeviceType(PeripheralDeviceType deviceType) {
         this.deviceType = deviceType;
+    }
+
+    public DevicePort getDevicePort() {
+        return devicePort;
+    }
+
+    public void setDevicePort(DevicePort devicePort) {
+        this.devicePort = devicePort;
     }
 
     @Override
@@ -38,7 +49,8 @@ public class PeripheralDevice extends Device{
 
         PeripheralDevice device = (PeripheralDevice) object;
 
-        return super.equals(device) && Objects.equals(deviceType, device.deviceType);
+        return super.equals(device) && Objects.equals(deviceType, device.deviceType)
+                && Objects.equals(devicePort, device.devicePort);
     }
 
     @Override
@@ -48,12 +60,13 @@ public class PeripheralDevice extends Device{
 
         result = result * prime + super.hashCode();
         result = result * prime + deviceType.hashCode();
+        result = result * prime + devicePort.hashCode();
 
         return result;
     }
 
     @Override
     public String toString() {
-        return super.toString() + ", deviceType: " + deviceType.getValue();
+        return super.toString() + ", devicePort" + devicePort.name() + ", deviceType: " + deviceType.getValue();
     }
 }

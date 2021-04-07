@@ -6,19 +6,16 @@ import java.util.Objects;
 public class IntegralDevice extends Device{
 
     private IntegralDeviceType deviceType;
-    private DevicePort devicePort;
 
     public IntegralDevice() {
     }
 
     public IntegralDevice(
             String id, String color, String name, DeviceOrigin origin, int price, YearMonth releaseTime,
-            int powerConsumption, boolean cooler, boolean critical, IntegralDeviceType deviceType,
-            DevicePort devicePort
+            int powerConsumption, boolean cooler, boolean critical, IntegralDeviceType deviceType
     ) {
         super(id, color, name, origin, price, releaseTime, powerConsumption, cooler, critical);
         this.deviceType = deviceType;
-        this.devicePort = devicePort;
     }
 
     public IntegralDeviceType getDeviceType() {
@@ -27,14 +24,6 @@ public class IntegralDevice extends Device{
 
     public void setDeviceType(IntegralDeviceType deviceType) {
         this.deviceType = deviceType;
-    }
-
-    public DevicePort getDevicePort() {
-        return devicePort;
-    }
-
-    public void setDevicePort(DevicePort devicePort) {
-        this.devicePort = devicePort;
     }
 
     @Override
@@ -49,8 +38,7 @@ public class IntegralDevice extends Device{
 
         IntegralDevice device = (IntegralDevice) object;
 
-        return super.equals(device) && Objects.equals(deviceType, device.deviceType)
-                && Objects.equals(devicePort, device.devicePort);
+        return super.equals(device) && Objects.equals(deviceType, device.deviceType);
     }
 
     @Override
@@ -60,13 +48,12 @@ public class IntegralDevice extends Device{
 
         result = result * prime + super.hashCode();
         result = result * prime + deviceType.hashCode();
-        result = result * prime + devicePort.hashCode();
 
         return result;
     }
 
     @Override
     public String toString() {
-        return super.toString() + ", devicePort" + devicePort.name() + ", deviceType: " + deviceType.getValue();
+        return super.toString() + ", deviceType: " + deviceType.getValue();
     }
 }

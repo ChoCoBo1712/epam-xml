@@ -12,7 +12,7 @@
         <cooler>false</cooler>
         <critical>true</critical>
         <port>USB</port>
-        <type>IO</type>
+        <peripheral-type>IO</peripheral-type>
     </peripheral-device>
 
     <peripheral-device id="peripheral2">
@@ -24,7 +24,7 @@
         <cooler>false</cooler>
         <critical>false</critical>
         <port>COM</port>
-        <type>Multimedia</type>
+        <peripheral-type>Multimedia</peripheral-type>
     </peripheral-device>
 
     <peripheral-device id="peripheral3">
@@ -36,7 +36,7 @@
         <cooler>true</cooler>
         <critical>false</critical>
         <port>LPT</port>
-        <type>IO</type>
+        <peripheral-type>IO</peripheral-type>
     </peripheral-device>
 
     <peripheral-device id="peripheral4" color="Red">
@@ -48,7 +48,7 @@
         <cooler>true</cooler>
         <critical>true</critical>
         <port>COM</port>
-        <type>IO</type>
+        <peripheral-type>IO</peripheral-type>
     </peripheral-device>
 
     <peripheral-device id="peripheral5">
@@ -60,7 +60,7 @@
         <cooler>false</cooler>
         <critical>false</critical>
         <port>USB</port>
-        <type>Multimedia</type>
+        <peripheral-type>Multimedia</peripheral-type>
     </peripheral-device>
 
     <peripheral-device id="peripheral6" color="Yellow">
@@ -72,7 +72,7 @@
         <cooler>true</cooler>
         <critical>false</critical>
         <port>LPT</port>
-        <type>Multimedia</type>
+        <peripheral-type>Multimedia</peripheral-type>
     </peripheral-device>
 
     <peripheral-device id="peripheral7">
@@ -84,7 +84,7 @@
         <cooler>true</cooler>
         <critical>false</critical>
         <port>COM</port>
-        <type>Multimedia</type>
+        <peripheral-type>Multimedia</peripheral-type>
     </peripheral-device>
 
     <peripheral-device id="peripheral8">
@@ -96,7 +96,7 @@
         <cooler>true</cooler>
         <critical>false</critical>
         <port>USB</port>
-        <type>IO</type>
+        <peripheral-type>IO</peripheral-type>
     </peripheral-device>
 
     <integral-device id="integral1">
@@ -107,7 +107,7 @@
         <power-consumption>1000</power-consumption>
         <cooler>true</cooler>
         <critical>true</critical>
-        <type>CPU</type>
+        <integral-type>CPU</integral-type>
     </integral-device>
 
     <integral-device id="integral2">
@@ -118,7 +118,7 @@
         <power-consumption>300</power-consumption>
         <cooler>false</cooler>
         <critical>true</critical>
-        <type>Motherboard</type>
+        <integral-type>Motherboard</integral-type>
     </integral-device>
 
     <integral-device id="integral3" color="Silver">
@@ -129,7 +129,7 @@
         <power-consumption>50</power-consumption>
         <cooler>false</cooler>
         <critical>true</critical>
-        <type>Power supply</type>
+        <integral-type>Power supply</integral-type>
     </integral-device>
 
     <integral-device id="integral4">
@@ -140,7 +140,7 @@
         <power-consumption>800</power-consumption>
         <cooler>true</cooler>
         <critical>true</critical>
-        <type>CPU</type>
+        <integral-type>CPU</integral-type>
     </integral-device>
 
     <integral-device id="integral5">
@@ -151,7 +151,7 @@
         <power-consumption>100</power-consumption>
         <cooler>true</cooler>
         <critical>true</critical>
-        <type>CPU</type>
+        <integral-type>CPU</integral-type>
     </integral-device>
 
     <integral-device id="integral6" color="Metallic">
@@ -162,7 +162,7 @@
         <power-consumption>150</power-consumption>
         <cooler>false</cooler>
         <critical>true</critical>
-        <type>Motherboard</type>
+        <integral-type>Motherboard</integral-type>
     </integral-device>
 
     <integral-device id="integral7">
@@ -173,7 +173,7 @@
         <power-consumption>450</power-consumption>
         <cooler>true</cooler>
         <critical>true</critical>
-        <type>CPU</type>
+        <integral-type>CPU</integral-type>
     </integral-device>
 
     <integral-device id="integral8">
@@ -184,7 +184,7 @@
         <power-consumption>100</power-consumption>
         <cooler>false</cooler>
         <critical>true</critical>
-        <type>Power supply</type>
+        <integral-type>Power supply</integral-type>
     </integral-device>
     
 </devices>

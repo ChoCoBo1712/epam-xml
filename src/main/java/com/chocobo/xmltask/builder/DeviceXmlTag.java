@@ -14,7 +14,8 @@ public enum DeviceXmlTag {
     COOLER,
     CRITICAL,
     PORT,
-    TYPE;
+    INTEGRAL_TYPE,
+    PERIPHERAL_TYPE;
 
     private static final char UNDERSCORE = '_';
     private static final char DASH = '-';

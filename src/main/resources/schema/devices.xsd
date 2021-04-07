@@ -48,7 +48,7 @@
             <extension base="tns:device">
                 <sequence>
                     <element name="port" type="tns:port"/>
-                    <element name="type" type="tns:peripheral-device-type"/>
+                    <element name="peripheral-type" type="tns:peripheral-type"/>
                 </sequence>
             </extension>
         </complexContent>
@@ -58,7 +58,7 @@
         <complexContent>
             <extension base="tns:device">
                 <sequence>
-                    <element name="type" type="tns:integral-device-type"/>
+                    <element name="integral-type" type="tns:integral-type"/>
                 </sequence>
             </extension>
         </complexContent>
@@ -87,7 +87,7 @@
         </restriction>
     </simpleType>
 
-    <simpleType name="integral-device-type">
+    <simpleType name="integral-type">
         <restriction base="string">
             <enumeration value="CPU"/>
             <enumeration value="Motherboard"/>
@@ -95,7 +95,7 @@
         </restriction>
     </simpleType>
 
-    <simpleType name="peripheral-device-type">
+    <simpleType name="peripheral-type">
         <restriction base="string">
             <enumeration value="IO"/>
             <enumeration value="Multimedia"/>
