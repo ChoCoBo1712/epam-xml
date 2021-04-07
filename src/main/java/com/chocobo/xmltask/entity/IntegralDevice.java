@@ -8,6 +8,9 @@ public class IntegralDevice extends Device{
     private IntegralDeviceType deviceType;
     private DevicePort devicePort;
 
+    public IntegralDevice() {
+    }
+
     public IntegralDevice(
             String id, String color, String name, DeviceOrigin origin, int price, YearMonth releaseTime,
             int powerConsumption, boolean cooler, boolean critical, IntegralDeviceType deviceType,

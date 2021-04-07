@@ -7,6 +7,9 @@ public class PeripheralDevice extends Device{
 
     private PeripheralDeviceType deviceType;
 
+    public PeripheralDevice() {
+    }
+
     public PeripheralDevice(
             String id, String color, String name, DeviceOrigin origin, int price, YearMonth releaseTime,
             int powerConsumption, boolean cooler, boolean critical, PeripheralDeviceType deviceType

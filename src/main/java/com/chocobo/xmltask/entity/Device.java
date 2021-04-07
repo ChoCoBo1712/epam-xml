@@ -5,6 +5,8 @@ import java.util.Objects;
 
 public abstract class Device {
 
+    public static final String DEFAULT_COLOR = "Black";
+
     private String id;
     private String color;
     private String name;
@@ -28,6 +30,9 @@ public abstract class Device {
         this.powerConsumption = powerConsumption;
         this.cooler = cooler;
         this.critical = critical;
+    }
+
+    public Device() {
     }
 
     public String getId() {
