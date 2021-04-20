@@ -38,7 +38,11 @@ public class IntegralDevice extends Device{
 
         IntegralDevice device = (IntegralDevice) object;
 
-        return super.equals(device) && Objects.equals(deviceType, device.deviceType);
+        boolean result = super.equals(device);
+        result &= (device.deviceType != null)
+                ? device.deviceType.equals(deviceType)
+                : device.deviceType == deviceType;
+        return result;
     }
 
     @Override

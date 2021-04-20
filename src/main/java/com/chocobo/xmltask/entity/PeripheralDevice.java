@@ -49,8 +49,14 @@ public class PeripheralDevice extends Device{
 
         PeripheralDevice device = (PeripheralDevice) object;
 
-        return super.equals(device) && Objects.equals(deviceType, device.deviceType)
-                && Objects.equals(devicePort, device.devicePort);
+        boolean result = super.equals(device);
+        result &= (device.devicePort != null)
+                ? device.devicePort.equals(devicePort)
+                : device.devicePort == devicePort;
+        result &= (device.deviceType != null)
+                ? device.deviceType.equals(deviceType)
+                : device.deviceType == deviceType;
+        return result;
     }
 
     @Override

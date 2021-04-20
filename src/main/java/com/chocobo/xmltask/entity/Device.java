@@ -119,11 +119,28 @@ public abstract class Device {
 
         Device device = (Device) object;
 
-        return Objects.equals(deviceId, device.deviceId) && Objects.equals(color, device.color)
-                && Objects.equals(name, device.name) && Objects.equals(origin, device.origin)
-                && Objects.equals(releaseTime, device.releaseTime) && price == device.price
-                && powerConsumption == device.powerConsumption && cooler == device.cooler
-                && critical == device.critical;
+        boolean result = price == device.price;
+        result &= powerConsumption == device.powerConsumption;
+        result &= cooler == device.cooler;
+        result &= critical == device.critical;
+
+        result &= (device.deviceId != null)
+                ? device.deviceId.equals(deviceId)
+                : device.deviceId == deviceId;
+        result &= (device.color != null)
+                ? device.color.equals(color)
+                : device.color == color;
+        result &= (device.name != null)
+                ? device.name.equals(name)
+                : device.name == name;
+        result &= (device.origin != null)
+                ? device.origin.equals(origin)
+                : device.origin == origin;
+        result &= (device.releaseTime != null)
+                ? device.releaseTime.equals(releaseTime)
+                : device.releaseTime == releaseTime;
+
+        return result;
     }
 
     @Override
