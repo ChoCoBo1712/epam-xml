@@ -131,11 +131,11 @@ public abstract class Device {
         int prime = 31;
         int result = 7;
 
-        result = prime * result + deviceId.hashCode();
-        result = prime * result + color.hashCode();
-        result = prime * result + name.hashCode();
-        result = prime * result + origin.hashCode();
-        result = prime * result + releaseTime.hashCode();
+        result = prime * result + (deviceId == null ? 0 : deviceId.hashCode());
+        result = prime * result + (color == null ? 0 : color.hashCode());
+        result = prime * result + (name == null ? 0 : name.hashCode());
+        result = prime * result + (origin == null ? 0 : origin.hashCode());
+        result = prime * result + (releaseTime == null ? 0 : releaseTime.hashCode());
         result = prime * result + Integer.hashCode(price);
         result = prime * result + Integer.hashCode(powerConsumption);
         result = prime * result + Boolean.hashCode(cooler);

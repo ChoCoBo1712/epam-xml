@@ -59,8 +59,8 @@ public class PeripheralDevice extends Device{
         int result = 7;
 
         result = result * prime + super.hashCode();
-        result = result * prime + deviceType.hashCode();
-        result = result * prime + devicePort.hashCode();
+        result = result * prime + (devicePort == null ? 0 : devicePort.hashCode());
+        result = result * prime + (deviceType == null ? 0 : deviceType.hashCode());
 
         return result;
     }
