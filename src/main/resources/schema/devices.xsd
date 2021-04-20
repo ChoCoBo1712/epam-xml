@@ -39,7 +39,7 @@
             <element name="cooler" type="boolean"/>
             <element name="critical" type="boolean"/>
         </sequence>
-        <attribute name="id" type="tns:device-id" use="required"/>
+        <attribute name="device-id" type="tns:device-id" use="required"/>
         <attribute name="color" type="string" use="optional" default="Black"/>
     </complexType>
     
@@ -67,9 +67,9 @@
     <simpleType name="origin">
         <restriction base="string">
             <enumeration value="USA"/>
-            <enumeration value="China"/>
-            <enumeration value="Japan"/>
-            <enumeration value="Germany"/>
+            <enumeration value="CHINA"/>
+            <enumeration value="JAPAN"/>
+            <enumeration value="GERMANY"/>
         </restriction>
     </simpleType>
 
@@ -90,15 +90,15 @@
     <simpleType name="integral-type">
         <restriction base="string">
             <enumeration value="CPU"/>
-            <enumeration value="Motherboard"/>
-            <enumeration value="Power supply"/>
+            <enumeration value="MOTHERBOARD"/>
+            <enumeration value="POWER"/>
         </restriction>
     </simpleType>
 
     <simpleType name="peripheral-type">
         <restriction base="string">
             <enumeration value="IO"/>
-            <enumeration value="Multimedia"/>
+            <enumeration value="MULTIMEDIA"/>
         </restriction>
     </simpleType>
 </schema>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devices xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://www.example.com/devices"
+         xsi:schemaLocation="http://www.example.com/devices ../schema/devices.xsd">
+
+    <peripheral-device>
+        <name>Peripheral example 1</name>
+        <origin>USA</origin>
+        <price>100</price>
+        <release-time>2020-12</release-time>
+        <power-consumption>100</power-consumption>
+        <cooler>false</cooler>
+        <critical>true</critical>
+        <port>USB</port>
+        <peripheral-type>IO</peripheral-type>
+    </peripheral-device>
+
+</devices>

@@ -54,6 +54,6 @@ public class IntegralDevice extends Device{
 
     @Override
     public String toString() {
-        return super.toString() + ", deviceType: " + deviceType.getValue();
+        return super.toString() + ", deviceType: " + deviceType.name();
     }
 }

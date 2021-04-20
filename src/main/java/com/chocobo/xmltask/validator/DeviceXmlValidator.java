@@ -11,26 +11,25 @@ import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
-import java.io.File;
 import java.io.IOException;
-import java.util.Objects;
+import java.net.URL;
 
 public class DeviceXmlValidator {
 
     private static final Logger logger = LogManager.getLogger();
-    private static final String language = XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI;
-    private static final SchemaFactory factory = SchemaFactory.newInstance(language);
     private static final String SCHEMA_NAME = "schema/devices.xsd";
-    private static final File SCHEMA_FILE;
+    private static final URL SCHEMA_URL;
 
     static {
         ClassLoader loader = DeviceXmlValidator.class.getClassLoader();
-        SCHEMA_FILE = new File(Objects.requireNonNull(loader.getResource(SCHEMA_NAME)).getFile());
+        SCHEMA_URL = loader.getResource(SCHEMA_NAME);
     }
 
     public static boolean isValidFile(String filePath) throws DeviceException {
+        String language = XMLConstants.W3C_XML_SCHEMA_NS_URI;
+        SchemaFactory factory = SchemaFactory.newInstance(language);
         try {
-            Schema schema = factory.newSchema(SCHEMA_FILE);
+            Schema schema = factory.newSchema(SCHEMA_URL);
             Validator validator = schema.newValidator();
             Source source = new StreamSource(filePath);
             validator.validate(source);

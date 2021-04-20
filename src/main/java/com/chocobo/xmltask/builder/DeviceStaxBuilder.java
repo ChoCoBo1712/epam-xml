@@ -59,9 +59,7 @@ public class DeviceStaxBuilder extends DeviceBuilder {
         String color = reader.getAttributeValue(null, colorAttr);
 
         device.setDeviceId(deviceId);
-        if (color != null) {
-            device.setColor(color);
-        }
+        device.setColor(color != null ? color : "Black");
 
         String name;
         while (reader.hasNext()) {

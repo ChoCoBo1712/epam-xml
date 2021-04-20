@@ -146,7 +146,7 @@ public abstract class Device {
 
     @Override
     public String toString() {
-        return "deviceId: " + deviceId + ", name: " + name + ", color: " + color + ", origin: " + origin.getValue()
+        return "deviceId: " + deviceId + ", name: " + name + ", color: " + color + ", origin: " + origin.name()
                 + ", releaseTime: " + releaseTime.toString() + ", price: " + price
                 + ", powerConsumption: " + powerConsumption + ", cooler: " + cooler + ", critical: " + critical;
     }
