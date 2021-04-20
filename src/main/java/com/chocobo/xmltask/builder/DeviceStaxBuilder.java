@@ -7,9 +7,7 @@ import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
-import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.YearMonth;
 
@@ -59,7 +57,7 @@ public class DeviceStaxBuilder extends DeviceBuilder {
         String color = reader.getAttributeValue(null, colorAttr);
 
         device.setDeviceId(deviceId);
-        device.setColor(color != null ? color : "Black");
+        device.setColor(color != null ? color : Device.DEFAULT_COLOR);
 
         String name;
         while (reader.hasNext()) {

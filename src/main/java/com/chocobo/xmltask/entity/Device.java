@@ -1,7 +1,6 @@
 package com.chocobo.xmltask.entity;
 
 import java.time.YearMonth;
-import java.util.Objects;
 
 public abstract class Device {
 

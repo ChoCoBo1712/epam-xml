@@ -1,7 +1,5 @@
 package com.chocobo.xmltask.builder;
 
-import java.util.Locale;
-
 public enum DeviceXmlTag {
     DEVICES,
     PERIPHERAL_DEVICE,
