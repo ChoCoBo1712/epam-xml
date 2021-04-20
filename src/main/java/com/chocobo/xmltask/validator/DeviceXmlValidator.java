@@ -34,11 +34,12 @@ public class DeviceXmlValidator {
             Source source = new StreamSource(filePath);
             validator.validate(source);
         } catch (SAXException e) {
-            logger.info("File is not valid : " + filePath, e);
+            logger.warn("File is not valid : " + filePath, e);
             return false;
         } catch (IOException e) {
             throw new DeviceException("Invalid file path: " + filePath, e);
         }
+        logger.info("Valid XML file: " + filePath);
         return true;
     }
 
