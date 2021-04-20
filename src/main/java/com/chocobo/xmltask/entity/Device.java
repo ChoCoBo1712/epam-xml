@@ -146,8 +146,16 @@ public abstract class Device {
 
     @Override
     public String toString() {
-        return "deviceId: " + deviceId + ", name: " + name + ", color: " + color + ", origin: " + origin.name()
-                + ", releaseTime: " + releaseTime.toString() + ", price: " + price
-                + ", powerConsumption: " + powerConsumption + ", cooler: " + cooler + ", critical: " + critical;
+        StringBuilder stringBuilder = new StringBuilder("");
+        stringBuilder.append("deviceId: ").append(deviceId);
+        stringBuilder.append(", name: ").append(name);
+        stringBuilder.append(", color: ").append(color);
+        stringBuilder.append(", origin: ").append(origin);
+        stringBuilder.append(", releaseTime: ").append(releaseTime);
+        stringBuilder.append(", price").append(price);
+        stringBuilder.append(", powerConsumption").append(powerConsumption);
+        stringBuilder.append(", cooler: ").append(cooler);
+        stringBuilder.append(", critical: ").append(critical);
+        return stringBuilder.toString();
     }
 }

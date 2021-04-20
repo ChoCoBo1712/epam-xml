@@ -67,6 +67,9 @@ public class PeripheralDevice extends Device{
 
     @Override
     public String toString() {
-        return super.toString() + ", devicePort" + devicePort.name() + ", deviceType: " + deviceType.getValue();
+        StringBuilder stringBuilder = new StringBuilder(super.toString());
+        stringBuilder.append(", devicePort").append(devicePort);
+        stringBuilder.append(", deviceType: ").append(deviceType).append(";");
+        return stringBuilder.toString();
     }
 }
