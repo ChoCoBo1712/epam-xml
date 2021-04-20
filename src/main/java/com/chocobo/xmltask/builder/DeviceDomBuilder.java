@@ -61,7 +61,7 @@ public class DeviceDomBuilder extends DeviceBuilder {
     }
 
     private void buildDevice(Element element, Device device) {
-        String idAttribute = DeviceXmlAttr.DEVICE_ID.toString();
+        String deviceIdAttribute = DeviceXmlAttr.DEVICE_ID.toString();
         String colorAttribute = DeviceXmlAttr.COLOR.toString();
         String nameTag = DeviceXmlTag.NAME.toString();
         String originTag = DeviceXmlTag.ORIGIN.toString();
@@ -71,18 +71,26 @@ public class DeviceDomBuilder extends DeviceBuilder {
         String coolerTag = DeviceXmlTag.COOLER.toString();
         String criticalTag = DeviceXmlTag.CRITICAL.toString();
 
+        String deviceId = element.getAttribute(deviceIdAttribute);
         String color = element.getAttribute(colorAttribute);
         color = color.isBlank() ? Device.DEFAULT_COLOR : color;
+        String name = getElementTextContent(element, nameTag);
+        DeviceOrigin origin = DeviceOrigin.valueOf(getElementTextContent(element, originTag));
+        int price = Integer.parseInt(getElementTextContent(element, priceTag));
+        YearMonth releaseTime = YearMonth.parse(getElementTextContent(element, releaseTimeTag));
+        int powerConsumption = Integer.parseInt(getElementTextContent(element, powerConsumptionTag));
+        boolean cooler = Boolean.parseBoolean(getElementTextContent(element, coolerTag));
+        boolean critical = Boolean.parseBoolean(getElementTextContent(element, criticalTag));
 
-        device.setDeviceId(element.getAttribute(idAttribute));
+        device.setDeviceId(deviceId);
         device.setColor(color);
-        device.setName(getElementTextContent(element, nameTag));
-        device.setOrigin(DeviceOrigin.valueOf(getElementTextContent(element, originTag)));
-        device.setPrice(Integer.parseInt(getElementTextContent(element, priceTag)));
-        device.setReleaseTime(YearMonth.parse(getElementTextContent(element, releaseTimeTag)));
-        device.setPowerConsumption(Integer.parseInt(getElementTextContent(element, powerConsumptionTag)));
-        device.setCooler(Boolean.parseBoolean(getElementTextContent(element, coolerTag)));
-        device.setCritical(Boolean.parseBoolean(getElementTextContent(element, criticalTag)));
+        device.setName(name);
+        device.setOrigin(origin);
+        device.setPrice(price);
+        device.setReleaseTime(releaseTime);
+        device.setPowerConsumption(powerConsumption);
+        device.setCooler(cooler);
+        device.setCritical(critical);
 
         if (device instanceof IntegralDevice) {
             IntegralDevice integralDevice = (IntegralDevice) device;
