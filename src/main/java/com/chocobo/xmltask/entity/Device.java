@@ -7,7 +7,7 @@ public abstract class Device {
 
     public static final String DEFAULT_COLOR = "Black";
 
-    private String id;
+    private String deviceId;
     private String color;
     private String name;
     private DeviceOrigin origin;
@@ -18,10 +18,10 @@ public abstract class Device {
     private boolean critical;
 
     public Device(
-            String id, String color, String name, DeviceOrigin origin, int price,
+            String deviceId, String color, String name, DeviceOrigin origin, int price,
             YearMonth releaseTime, int powerConsumption, boolean cooler, boolean critical
     ) {
-        this.id = id;
+        this.deviceId = deviceId;
         this.color = color;
         this.name = name;
         this.origin = origin;
@@ -35,12 +35,12 @@ public abstract class Device {
     public Device() {
     }
 
-    public String getId() {
-        return id;
+    public String getDeviceId() {
+        return deviceId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setDeviceId(String id) {
+        this.deviceId = id;
     }
 
     public String getColor() {
@@ -119,7 +119,7 @@ public abstract class Device {
 
         Device device = (Device) object;
 
-        return Objects.equals(id, device.id) && Objects.equals(color, device.color)
+        return Objects.equals(deviceId, device.deviceId) && Objects.equals(color, device.color)
                 && Objects.equals(name, device.name) && Objects.equals(origin, device.origin)
                 && Objects.equals(releaseTime, device.releaseTime) && price == device.price
                 && powerConsumption == device.powerConsumption && cooler == device.cooler
@@ -131,7 +131,7 @@ public abstract class Device {
         int prime = 31;
         int result = 7;
 
-        result = prime * result + id.hashCode();
+        result = prime * result + deviceId.hashCode();
         result = prime * result + color.hashCode();
         result = prime * result + name.hashCode();
         result = prime * result + origin.hashCode();
@@ -146,7 +146,7 @@ public abstract class Device {
 
     @Override
     public String toString() {
-        return "id: " + id + ", name: " + name + ", color: " + color + ", origin: " + origin.getValue()
+        return "deviceId: " + deviceId + ", name: " + name + ", color: " + color + ", origin: " + origin.getValue()
                 + ", releaseTime: " + releaseTime.toString() + ", price: " + price
                 + ", powerConsumption: " + powerConsumption + ", cooler: " + cooler + ", critical: " + critical;
     }

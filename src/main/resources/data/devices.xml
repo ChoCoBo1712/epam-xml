@@ -132,7 +132,7 @@
         <integral-type>Power supply</integral-type>
     </integral-device>
 
-    <integral-device id="integral4">
+    <integral-device  id="integral4">
         <name>Integral example 4</name>
         <origin>Germany</origin>
         <price>5000</price>

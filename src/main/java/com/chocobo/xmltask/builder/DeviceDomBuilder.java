@@ -14,9 +14,9 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.time.YearMonth;
 
-public class DeviceDomBuilder extends DeviceBuilder{
+public class DeviceDomBuilder extends DeviceBuilder {
 
-    private DocumentBuilder documentBuilder;
+    private final DocumentBuilder documentBuilder;
 
     public DeviceDomBuilder() throws DeviceException {
         super();
@@ -61,7 +61,7 @@ public class DeviceDomBuilder extends DeviceBuilder{
     }
 
     private void buildDevice(Element element, Device device) {
-        String idAttribute = DeviceXmlAttr.ID.toString();
+        String idAttribute = DeviceXmlAttr.DEVICE_ID.toString();
         String colorAttribute = DeviceXmlAttr.COLOR.toString();
         String nameTag = DeviceXmlTag.NAME.toString();
         String originTag = DeviceXmlTag.ORIGIN.toString();
@@ -74,7 +74,7 @@ public class DeviceDomBuilder extends DeviceBuilder{
         String color = element.getAttribute(colorAttribute);
         color = color.isBlank() ? Device.DEFAULT_COLOR : color;
 
-        device.setId(element.getAttribute(idAttribute));
+        device.setDeviceId(element.getAttribute(idAttribute));
         device.setColor(color);
         device.setName(getElementTextContent(element, nameTag));
         device.setOrigin(DeviceOrigin.valueOf(getElementTextContent(element, originTag)));

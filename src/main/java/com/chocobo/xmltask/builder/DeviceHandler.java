@@ -14,10 +14,10 @@ public class DeviceHandler extends DefaultHandler {
     private static final char DASH = '-';
     private static final char UNDERSCORE = '_';
 
-    private Set<Device> devices;
+    private final Set<Device> devices;
     private Device currentDevice;
     private DeviceXmlTag currentTag;
-    private EnumSet<DeviceXmlTag> tagsWithText;
+    private final EnumSet<DeviceXmlTag> tagsWithText;
 
     public DeviceHandler() {
         devices = new HashSet<>();
@@ -32,7 +32,7 @@ public class DeviceHandler extends DefaultHandler {
     public void startElement(String uri, String localName, String qName, Attributes attrs) {
         String integralDeviceTag = DeviceXmlTag.INTEGRAL_DEVICE.toString();
         String peripheralDeviceTag = DeviceXmlTag.PERIPHERAL_DEVICE.toString();
-        String idAttr = DeviceXmlAttr.ID.toString();
+        String idAttr = DeviceXmlAttr.DEVICE_ID.toString();
 
         if (integralDeviceTag.equals(qName) || peripheralDeviceTag.equals(qName)) {
             currentDevice = integralDeviceTag.equals(qName) ? new IntegralDevice() : new PeripheralDevice();
@@ -42,7 +42,7 @@ public class DeviceHandler extends DefaultHandler {
             String secondAttrValue = attrs.getValue(1);
 
             if (idAttr.equals(firstAttrName)) {
-                currentDevice.setId(firstAttrValue);
+                currentDevice.setDeviceId(firstAttrValue);
                 currentDevice.setColor(secondAttrValue != null ? secondAttrValue : Device.DEFAULT_COLOR);
             } else {
                 currentDevice.setColor(firstAttrValue);
@@ -100,6 +100,8 @@ public class DeviceHandler extends DefaultHandler {
     }
 
     private String toEnumName(String string) {
-        return string.strip().replace(DASH, UNDERSCORE).toUpperCase();
+        return string.strip()
+                .replace(DASH, UNDERSCORE)
+                .toUpperCase();
     }
 }

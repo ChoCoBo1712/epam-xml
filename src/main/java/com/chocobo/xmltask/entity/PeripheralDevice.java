@@ -12,11 +12,11 @@ public class PeripheralDevice extends Device{
     }
 
     public PeripheralDevice(
-            String id, String color, String name, DeviceOrigin origin, int price, YearMonth releaseTime,
+            String deviceId, String color, String name, DeviceOrigin origin, int price, YearMonth releaseTime,
             int powerConsumption, boolean cooler, boolean critical, PeripheralDeviceType deviceType,
             DevicePort devicePort
     ) {
-        super(id, color, name, origin, price, releaseTime, powerConsumption, cooler, critical);
+        super(deviceId, color, name, origin, price, releaseTime, powerConsumption, cooler, critical);
         this.deviceType = deviceType;
         this.devicePort = devicePort;
     }

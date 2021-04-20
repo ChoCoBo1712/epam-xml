@@ -1,7 +1,7 @@
 package com.chocobo.xmltask.builder;
 
 public enum DeviceXmlAttr {
-    ID,
+    DEVICE_ID,
     COLOR;
 
     @Override

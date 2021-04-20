@@ -1,6 +1,5 @@
 package com.chocobo.xmltask.builder;
 
-import com.chocobo.xmltask.entity.Device;
 import com.chocobo.xmltask.exception.DeviceException;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
@@ -9,12 +8,11 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.IOException;
-import java.util.Set;
 
 public class DeviceSaxBuilder extends DeviceBuilder {
 
-    private DeviceHandler handler = new DeviceHandler();
-    private XMLReader reader;
+    private final DeviceHandler handler = new DeviceHandler();
+    private final XMLReader reader;
 
     public DeviceSaxBuilder() throws DeviceException {
         SAXParserFactory factory = SAXParserFactory.newInstance();

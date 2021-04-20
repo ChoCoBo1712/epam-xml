@@ -11,10 +11,10 @@ public class IntegralDevice extends Device{
     }
 
     public IntegralDevice(
-            String id, String color, String name, DeviceOrigin origin, int price, YearMonth releaseTime,
+            String deviceId, String color, String name, DeviceOrigin origin, int price, YearMonth releaseTime,
             int powerConsumption, boolean cooler, boolean critical, IntegralDeviceType deviceType
     ) {
-        super(id, color, name, origin, price, releaseTime, powerConsumption, cooler, critical);
+        super(deviceId, color, name, origin, price, releaseTime, powerConsumption, cooler, critical);
         this.deviceType = deviceType;
     }
 
